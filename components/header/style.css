@@ -1,0 +1,44 @@
+.header {
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    --tw-bg-opacity: 1;
+    background-color: #F7F7F7;
+    padding-right: 15%;
+    padding-left: 15%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #224957;
+    font-size: 20px;
+}
+
+.items {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+}
+
+.exit {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #224957;
+    border: 1px solid #20DF7F;
+    background: #20DF7F;
+    cursor: pointer;
+    margin-left: 20px;
+    width: 70px;
+}
+
+.exit:hover {
+
+    color: #20DF7F;
+    border: 1px solid #224957;
+    background: #224957;
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.calendar{
+    border: 1px solid black;
+    border-radius: 10px;
+    background: white;
+
+}
+.rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover{
+    background: #CECECE;
+    color: black;
+}
