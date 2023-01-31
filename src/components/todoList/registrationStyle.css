@@ -72,7 +72,7 @@ body {
     height: 42px;
     padding-left: 10px;
 }
-#submit{
+#submit__information{
     font-family: 'Lexend Deca';
     font-style: normal;
     font-weight: 400;
@@ -86,7 +86,7 @@ body {
     cursor: pointer;
     width: 310px;
 }
-#submit:hover{
+#submit__information:hover{
 
     background:  #224957;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);

@@ -1,7 +1,8 @@
-import {useForm} from "react-hook-form";
-import {useNavigate} from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './registrationStyle.css'
+
 export const FormRegistration = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const navigate = useNavigate()
@@ -19,7 +20,7 @@ export const FormRegistration = () => {
         <input  type='email' placeholder='Email' {...register('email')} />
         <input  type='password' placeholder='Password' {...register('password')}/>
         <input  type='password' placeholder='Confirm Password' {...register('confirmPassword')}/>
-        <input id='submit'   type='submit' value='Register'/>
+        <input id='submit__information'   type='submit' value='Register'/>
 
     </form>
 

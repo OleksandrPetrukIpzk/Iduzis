@@ -1,11 +1,12 @@
-import {useState} from "react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {FormLogin} from "./components/todoList/FormLogin";
-import {FormRegistration} from "./components/todoList/FormRegistration";
-import {MainPage} from "./components/MainPage/MainPage";
-import {Navigate} from "react-router-dom";
-import {Context} from './context'
+import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { FormLogin } from "./components/todoList/FormLogin";
+import { FormRegistration } from "./components/todoList/FormRegistration";
+import { MainPage } from "./components/MainPage/MainPage";
+import { Navigate } from "react-router-dom";
+import { Context } from './context'
 import './style.css';
+
 function App() {
     const [date, setDate] = useState(new Date());
     const [items, setItems] = useState([]);

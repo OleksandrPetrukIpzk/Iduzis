@@ -1,20 +1,20 @@
-import {useContext} from "react";
-import {format} from "date-fns";
-import {toast} from "react-toastify";
-import {Context} from "../../context";
+import { useContext } from "react";
+import { format } from "date-fns";
+import { toast } from "react-toastify";
+import { Context } from "../../context";
 import axiosInterface from "../../interseptor";
+import { convertDates } from "./convertDates";
 
 export const List = ({itemFilter, ids}) =>{
     const {date, setItems} = useContext(Context);
-    const dates = format(date, "yyyy-MM-dd");
     const deleteElement = (value, title) => {
-        axiosInterface.delete(`/todo/${value}?date=${dates}`).then(response => {
+        axiosInterface.delete(`/todo/${value}?date=${convertDates(date)}`).then(response => {
             setItems(response.data.todos);
             toast(`Element ${title} was delete`)
         }).catch(error => console.log(error))
     }
     const checkElement = (value, title, check) => {
-        axiosInterface.patch(`/todo/${value}?date=${dates}`)
+        axiosInterface.patch(`/todo/${value}?date=${convertDates(date)}`)
             .then(response => {
                     setItems(response.data.todos)
                     if (check === false) {
