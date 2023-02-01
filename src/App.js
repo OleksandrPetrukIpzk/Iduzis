@@ -1,34 +1,39 @@
 import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { FormLogin } from "./components/todoList/FormLogin";
 import { FormRegistration } from "./components/todoList/FormRegistration";
 import { MainPage } from "./components/MainPage/MainPage";
-import { Navigate } from "react-router-dom";
 import { Context } from './context'
+import {dateToday, isLoginUser, pathLogin, pathRegistrationUser,pathMainPage} from './components/constants'
+import {Notification} from "./components/todoList/Notification";
 import './style.css';
 
 function App() {
-    const [date, setDate] = useState(new Date());
-    const [items, setItems] = useState([]);
-    const [isLogin, setIsLogin] = useState(localStorage.getItem('isLogin'))
+    const [date, setDate] = useState(dateToday);
+    const [listElement, setListElement] = useState([]);
+    const [isLogin, setIsLogin] = useState(isLoginUser);
+
     const router = createBrowserRouter([{
         path: '/',
-        element: isLogin === 'true' ? <Navigate to='/main' replace={true}/> : <Navigate to='/login' replace={true}/>,
+        element: isLogin ? <Navigate to={pathMainPage} replace/> : <Navigate to={pathLogin} replace/>,
     },
         {
-            path: '/login',
-            element: isLogin === 'false' ?  <FormLogin/> : <Navigate to='/main' replace={true}/>,
+            path: pathLogin,
+            element: !isLogin  ?  <FormLogin/> : <Navigate to={pathMainPage} replace/>,
         },
         {
-            path: '/registration',
-            element: isLogin === 'false' ? <FormRegistration /> : <Navigate to='/main' replace={true}/>
+            path: pathRegistrationUser,
+            element: !isLogin  ? <FormRegistration /> : <Navigate to={pathMainPage} replace/>
         },
         {
-            path: '/main',
-            element: isLogin === 'true' ? <MainPage/> : <Navigate to='/login' replace={true}/>,
+            path: pathMainPage,
+            element: isLogin  ? <MainPage/> : <Navigate to={pathLogin} replace/>,
         }])
+
     return (
-        <Context.Provider value={{date, setDate, items, setItems, isLogin, setIsLogin}}>
+        <Context.Provider value={{date, setDate, listElement, setListElement, isLogin, setIsLogin}}>
+            <Notification/>
             <RouterProvider router={router} />
         </Context.Provider>
     );

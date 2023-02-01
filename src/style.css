@@ -1,4 +1,9 @@
-
+:root{
+    --main--font--family: 'Lexend Deca';
+    --main--color--green:  #20DF7F;
+    --main--color--blue: #224957;
+    --main--color--white: white;
+}
 .main{
     margin-top: 40px;
     display: flex;
@@ -27,14 +32,14 @@ body{
 .plus{
     padding: 10px 35px;
     border-radius: 10px;
-    border: 1px solid #20DF7F;
-    background: #224957;
-    color: #20DF7F;
+    border: 1px solid var(--main--color--green);
+    background: var(--main--color--blue);
+    color: var(--main--color--green);
     cursor: pointer;
 
 }
 .plus:hover{
-    background: white;
+    background: var(--main--color--white);
     color: black;
     cursor: pointer;
 }
@@ -47,18 +52,18 @@ body{
 }
 .task{
     width: 200px;
-    color: white;
+    color: var(--main--color--white);
 }
 .send{
     margin-left: 20px;
     border-radius: 10px;
-    border: 1px solid white;
-    background: #224957;
-    color: white;
+    border: 1px solid var(--main--color--white);
+    background: var(--main--color--blue);
+    color: var(--main--color--white);
     cursor: pointer;
 }
 .send:hover{
-    background: white;
+    background: var(--main--color--white);
     color: dodgerblue;
     cursor: pointer;
 }
@@ -73,27 +78,27 @@ body{
     align-items: center;
 }
 .check{
-margin-bottom: 0;
+    margin-bottom: 0;
     margin-right: 20px;
     padding: 10px;
     width: 18px;
     height: 22px;
 }
 .delete{
-    font-family: 'Lexend Deca';
+    font-family: var(--main--font--family);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    background: #20DF7F;
+    background: var(--main--color--green);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    color: #224957;
-    border: 1px solid #20DF7F;
+    color: var(--main--color--blue);
+    border: 1px solid var(--main--color--green);
     cursor: pointer;
     padding: 10px;
 }
 .delete:hover{
-    background: white;
+    background: var(--main--color--white);
     color: black;
 }

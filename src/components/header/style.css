@@ -1,5 +1,6 @@
+
 .header {
-    font-family: 'Lexend Deca';
+    font-family: var(--main--font--family);
     font-style: normal;
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,7 @@
     align-items: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    color: #224957;
+    color: var(--main--color--blue);
     font-size: 20px;
 }
 
@@ -27,9 +28,9 @@
 .exit {
     padding: 5px 10px;
     border-radius: 10px;
-    color: #224957;
-    border: 1px solid #20DF7F;
-    background: #20DF7F;
+    color: var(--main--color--blue);
+    border: 1px solid var(--main--color--green);
+    background: var(--main--color--green);
     cursor: pointer;
     margin-left: 20px;
     width: 70px;
@@ -37,8 +38,8 @@
 
 .exit:hover {
 
-    color: #20DF7F;
-    border: 1px solid #224957;
-    background: #224957;
+    color: var(--main--color--green);
+    border: 1px solid var(--main--color--blue);
+    background: var(--main--color--blue);
     cursor: pointer;
 }

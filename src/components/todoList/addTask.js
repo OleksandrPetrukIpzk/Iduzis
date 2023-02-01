@@ -1,12 +1,14 @@
-import axiosInterface from "../../interseptor";
+import {toast} from "react-toastify";
+import axiosInterface from "../../incerceptor";
 
-export const addTask = (data, dates, setItems) => {
+export const addTask = (data, dates, setListElement) => {
+    const {title} = data;
     axiosInterface.post(`/todo?date=${dates}`, {
-            title: data.title
+            title: title
         }
     ).then(response => {
-        toast(`Element ${data.title} added to missions`)
-        setItems(response.data.todos)
+        toast(`Element ${title} added to missions`)
+        setListElement(response.data.todos)
     })
-        .catch(error => console.log(error))
+        .catch(() => toast.error('Problem witch server'))
 }

@@ -1,13 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Context } from "../../context";
-import { DayPicker } from "react-day-picker";
+import React, {useContext, useEffect, useState} from "react";
+import {DayPicker} from "react-day-picker";
+import {Context} from "../../context";
+import {dateToday, startYear} from "../constants";
 import 'react-day-picker/dist/style.css';
 import "./style.css";
 
 export const Calendar = () => {
     const {setDate} = useContext(Context)
-    const [selected, setSelected] = useState(new Date());
-    const fromYear = 2021;
+    const [selected, setSelected] = useState(dateToday);
+
     useEffect(() => {
         setDate(selected);
     }, [selected]);
@@ -16,7 +17,7 @@ export const Calendar = () => {
         <DayPicker mode='single'
                    selected={selected}
                    onSelect={setSelected}
-                   fromYear={fromYear}
+                   fromYear={startYear}
                    className='calendar'
         />
     )
