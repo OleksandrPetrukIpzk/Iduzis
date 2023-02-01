@@ -1,6 +1,6 @@
-import {useContext, useState} from "react";
-import {useForm} from "react-hook-form";
-import {addTask} from "./addTask";
+import { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { addTask } from "./addTask";
 import {convertDates} from "./convertDates";
 import {Modal} from "./Modal";
 import {Context} from "../../context";

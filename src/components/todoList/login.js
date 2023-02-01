@@ -1,6 +1,6 @@
+import {toast} from "react-toastify";
 import axiosInterface from "../../incerceptor";
 import {pathMainPage} from "../constants";
-import {toast} from "react-toastify";
 
 export const login = (data, navigate, setIsLogin) => {
     axiosInterface.post('auth/login/', data)

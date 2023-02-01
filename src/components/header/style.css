@@ -1,4 +1,3 @@
-
 .header {
     font-family: var(--main--font--family);
     font-style: normal;
@@ -37,7 +36,6 @@
 }
 
 .exit:hover {
-
     color: var(--main--color--green);
     border: 1px solid var(--main--color--blue);
     background: var(--main--color--blue);

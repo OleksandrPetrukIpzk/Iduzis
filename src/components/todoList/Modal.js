@@ -1,6 +1,5 @@
 import './style.css'
 
-
 export const Modal = ({active, setActive, children}) => {
     const closeModal = () =>{
         setActive(false)

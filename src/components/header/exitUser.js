@@ -1,5 +1,4 @@
-
-export const exitUser = (navigate,setIsLogin) => {
+export const exitUser = (navigate, setIsLogin) => {
     localStorage.removeItem('userTokenFroLogin');
     localStorage.removeItem('personInformation');
     setIsLogin(false);

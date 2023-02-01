@@ -1,9 +1,8 @@
-import {useForm} from "react-hook-form";
-import {Link, useNavigate} from "react-router-dom";
-import axios from "axios";
-import './registrationStyle.css'
-import {formParametrs, objectsForRegistration} from "../constants";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
 import {registrationUser} from "./registrationUser";
+import {formParametrs, objectsForRegistration} from "../constants";
+import './registrationStyle.css'
 
 export const FormRegistration = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -24,7 +23,6 @@ export const FormRegistration = () => {
                 )}
                 <input id='submit' type='submit' value='Register'/>
             </form>
-
         </div>
     )
 }

@@ -1,20 +1,18 @@
-import {useContext, useEffect} from "react";
-import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
+import { useContext, useEffect } from "react";
+import { TabPanel } from "react-tabs";
+import {toast} from "react-toastify";
+import { HeaderButton } from "./HeaderButton";
+import { ListElement } from "./ListElement";
+import { convertDates } from "./convertDates";
+import {TabComponent} from "./TabComponent";
 import axiosInterface from "../../incerceptor";
 import {Context} from "../../context";
-import {Notification} from "./Notification";
-import {HeaderButton} from "./HeaderButton";
-import {ListElement} from "./ListElement";
-import {convertDates} from "./convertDates";
 import './style.css';
 import 'react-tabs/style/react-tabs.css';
 import 'react-toastify/dist/ReactToastify.css';
-import {toast} from "react-toastify";
-import {TabComponent} from "./TabComponent";
 
 export const TodoList = () => {
     const {date, listElement, setListElement} = useContext(Context)
-
     useEffect(() => {
         axiosInterface.get('todo', {
             params: {

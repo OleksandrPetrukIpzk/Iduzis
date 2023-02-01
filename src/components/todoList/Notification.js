@@ -1,7 +1,7 @@
-import {ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 export const Notification = () => {
-    return (<ToastContainer
+    return  <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
@@ -12,5 +12,5 @@ export const Notification = () => {
         draggable
         pauseOnHover
         theme="dark"
-    />)
+    />
 }

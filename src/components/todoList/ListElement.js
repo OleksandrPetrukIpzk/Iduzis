@@ -1,9 +1,6 @@
 import {useContext} from "react";
-import {toast} from "react-toastify";
-import {Context} from "../../context";
-import axiosInterface from "../../incerceptor";
-import {convertDates} from "./convertDates";
 import {checkElement, deleteElement} from "./deleteAndCheckElements";
+import {Context} from "../../context";
 
 export const ListElement = ({itemFilter, ids}) =>{
     const {date, setListElement} = useContext(Context);
