@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import {ReactComponent as Logo} from '../../img/Logo.svg'
+import {useNavigate} from "react-router-dom";
+import {useContext} from "react";
+import {ReactComponent as Logo} from 'img/Logo.svg'
 import {exitUser} from "./exitUser";
-import {userName} from "../constants";
-import {Context} from "../../context";
+import {userName} from "components/constants";
+import {Context} from "context";
 import './style.css';
 
 export const Header = () => {
@@ -11,6 +11,7 @@ export const Header = () => {
     const {setIsLogin} = useContext(Context)
     const signOut = () =>{
         exitUser(navigate, setIsLogin);
+
     }
 
     return (

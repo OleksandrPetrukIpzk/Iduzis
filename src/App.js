@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import { FormLogin } from "./components/todoList/FormLogin";
-import { FormRegistration } from "./components/todoList/FormRegistration";
-import { MainPage } from "./components/MainPage/MainPage";
-import { Context } from './context'
-import {dateToday, isLoginUser, pathLogin, pathRegistrationUser,pathMainPage} from './components/constants'
-import {Notification} from "./components/todoList/Notification";
+import { FormLogin } from "components/todoList/FormLogin";
+import { FormRegistration } from "components/todoList/FormRegistration";
+import { MainPage } from "components/MainPage/MainPage";
+import { Context } from 'context'
+import {dateToday, isLoginUser, pathLogin, pathRegistrationUser,pathMainPage} from 'components/constants'
+import {Notification} from "components/todoList/Notification";
 import './style.css';
 
 function App() {

@@ -1,6 +1,6 @@
-import { Header } from "../header/Header";
-import { Calendar } from "../calendar/calendar";
-import { TodoList } from "../todoList/TodoList";
+import {Header} from "components/header/Header";
+import {Calendar} from "components/calendar/Calendar";
+import {TodoList} from "components/todoList/TodoList";
 export const MainPage = () =>{
     return(<div>
         <Header/>
