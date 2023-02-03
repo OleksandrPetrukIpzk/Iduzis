@@ -1,7 +1,7 @@
-import { ToastContainer } from "react-toastify";
+import {ToastContainer} from "react-toastify";
 
-export const Notification = () =>{
-    return(        <ToastContainer
+export const Notification = () => {
+    return (<ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
