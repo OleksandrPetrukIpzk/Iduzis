@@ -1,0 +1,45 @@
+
+.header {
+    font-family: var(--main--font--family);
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    --tw-bg-opacity: 1;
+    background-color: #F7F7F7;
+    padding-right: 15%;
+    padding-left: 15%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: var(--main--color--blue);
+    font-size: 20px;
+}
+
+.items {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+}
+
+.exit {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: var(--main--color--blue);
+    border: 1px solid var(--main--color--green);
+    background: var(--main--color--green);
+    cursor: pointer;
+    margin-left: 20px;
+    width: 70px;
+}
+
+.exit:hover {
+
+    color: var(--main--color--green);
+    border: 1px solid var(--main--color--blue);
+    background: var(--main--color--blue);
+    cursor: pointer;
+}
